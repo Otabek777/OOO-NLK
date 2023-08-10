@@ -32,7 +32,7 @@
                             </svg>
                             +7 (913) 000-06-98
                         </a>
-                        <button class="header__call">
+                        <button class="header__call modal-open">
                             Заказать звонок
                         </button>
                     </div>
@@ -207,6 +207,31 @@
             </div>
         </div>
     </header>
+    <!-- modal -->
+    <div class="modal">
+        <div class="modal__block">
+            <button class="modal__close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M1 1L9 9M9 9L17 17M9 9L17 1M9 9L1 17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h2>Форма заявки</h2>
+            <div class="connect__form">
+                <div class="connect__input">
+                    <input type="text" placeholder="Ваше имя">
+                </div>
+                <div class="connect__input">
+                    <input type="text" placeholder="+7 (___) ___-__-__" class="input_phone tel">
+                </div>
+                <div class="connect__input">
+                    <input type="email" placeholder="i_ivanov@gmail.com">
+                </div>
+                <textarea class="connect__textarea" placeholder="Сообщение"></textarea>
+                <button class="main_btn">Заказать звонок</button>
+                <h6>Нажимая на кнопку «Заказать звонок», я соглашаюсь с <a href="#">Политикой обработки персональных данных</a></h6>
+            </div>
+        </div>
+    </div>
     <main class="main">
         <div class="crumbs">
             <div class="container">
@@ -511,7 +536,7 @@
                             </svg>
                             +7 (913) 000-06-98
                         </a>
-                        <button class="footer__call">
+                        <button class="footer__call modal-open">
                             Заказать звонок
                         </button>
                     </div>
@@ -548,7 +573,7 @@
             dots: false,
             responsive: [
                 {
-                breakpoint: 1024,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 2,
                 }

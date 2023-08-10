@@ -30,6 +30,59 @@ $(".header__burgir").click(function() {
         }, 300);
     }
 });
+$(".modal-open").click(function() {
+    $(".modal").addClass("active");
+    setTimeout(function() {
+        $(".modal").addClass("opacity");
+    }, 10);
+});
+$(".modal__close").click(function() {
+    $(".modal").removeClass("opacity");
+    setTimeout(function() {
+        $(".modal").removeClass("active");
+    }, 400);
+});
+
+if($(".counter")) {
+    var quantity = $(".counter");
+    quantity.children(".plus").click(function() {
+        $(this).next(".num").val( function(i, oldval) {
+            return ++oldval;
+        });
+    });
+    quantity.children(".minus").click(function() {
+        if($(this).prev(".num").val() != 1) {
+            $(this).prev(".num").val( function(i, oldval) {
+                return --oldval;
+            });
+        };
+    });
+};
+
+if($(".product__tabBtn")) {
+    function TabClick(num) {
+        $("#tabBtn-"+num).click(function() {
+            $(".product__tabBtn .btn").removeClass("active");
+            $(".product__tabBlock").removeClass("active");
+            $(this).addClass("active");
+            $("#tabBlock-"+num).addClass("active");
+        });
+    };
+    TabClick("1");
+    TabClick("2");
+};
+if($(".tabBtn")) {
+    function TabClick(num) {
+        $("#tabBtn-"+num).click(function() {
+            $(".tabBtn .btn").removeClass("active");
+            $(".tabBlock").removeClass("active");
+            $(this).addClass("active");
+            $("#tabBlock-"+num).addClass("active");
+        });
+    };
+    TabClick("1");
+    TabClick("2");
+};
 
 if(document.querySelector('.input_phone')) {
     window.addEventListener("DOMContentLoaded", function() {
