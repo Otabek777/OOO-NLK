@@ -1972,7 +1972,21 @@ ul, ol {
   display: none;
 }
 
+@media screen and (max-width: 1450px) {
+  .recommendations__slider .slick-prev {
+    left: 0;
+  }
+  .recommendations__slider .slick-next {
+    right: 0;
+  }
+}
 @media screen and (max-width: 1250px) {
+  .footer__right {
+    margin: 0;
+  }
+  .footer__wrap p {
+    margin-bottom: 32px;
+  }
   .header__navbar > ul li {
     margin-right: 24px;
   }
@@ -1986,12 +2000,23 @@ ul, ol {
     font-size: 16px;
   }
   .product__aside {
-    margin: 0 auto;
+    margin: 0;
+    margin-left: 595px;
     margin-bottom: 40px;
   }
   .header__logo {
     width: 60px;
     height: 60px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .basket__aside {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .basket__aside {
+    max-width: 400px;
   }
 }
 @media screen and (max-width: 1025px) {
@@ -2216,7 +2241,6 @@ ul, ol {
   }
   .footer__wrap p {
     font-size: 14px;
-    margin-bottom: 32px;
   }
   .footer__right {
     margin-left: 0;
